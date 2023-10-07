@@ -7,13 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591756740019763523, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: bd401d0a78b3eac41a457fb7998017dc, type: 2}
     - target: {fileID: 2984664089104267313, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6354333384484250381, guid: 6fb78d296f546aa4680350fd6e8e3315, type: 3}
     - target: {fileID: 7654395110853289967, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
       propertyPath: m_Name
-      value: Enemy_Rock
+      value: Enemy_Rock Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7732252942740799982, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
       propertyPath: m_RootOrder

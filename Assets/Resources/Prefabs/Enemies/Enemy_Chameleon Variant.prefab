@@ -7,13 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591756740019763523, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 86234dad8ab684047b60500197e35a9c, type: 2}
     - target: {fileID: 2984664089104267313, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1022226135674028260, guid: 5c876d5b9f3c75b409e35030dd07bc57, type: 3}
     - target: {fileID: 7654395110853289967, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
       propertyPath: m_Name
-      value: Enemy_Chameleon
+      value: Enemy_Chameleon Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7732252942740799982, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
       propertyPath: m_RootOrder

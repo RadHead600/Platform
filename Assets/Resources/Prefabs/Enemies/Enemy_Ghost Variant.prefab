@@ -7,13 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591756740019763523, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: fa8ed462a0d807a47ba07c15a68070d1, type: 2}
     - target: {fileID: 2984664089104267313, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4740742658319907719, guid: d4f2f936f814df24fb7559370c465cdc, type: 3}
     - target: {fileID: 7654395110853289967, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
       propertyPath: m_Name
-      value: Enemy_Ghost
+      value: Enemy_Ghost Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7732252942740799982, guid: 0f33350931937234f93bdb4ee476c0a3, type: 3}
       propertyPath: m_RootOrder
