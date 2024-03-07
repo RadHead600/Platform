@@ -21,7 +21,6 @@ public class CharacterMouseAttack : MonoBehaviour
 
     private void Update()
     {
-#if !UNITY_WEBGL || UNITY_EDITOR
         if (Input.GetMouseButton(ATTACK_MOUSE_BUTTON))
         {
             _difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -31,6 +30,5 @@ public class CharacterMouseAttack : MonoBehaviour
                 _characterStatUI.ChangeText(_characterStatUI.BulletsText, _characterWeapon.Weapon.BulletInMagazine.ToString());
             }
         }
-#endif
     }
 }

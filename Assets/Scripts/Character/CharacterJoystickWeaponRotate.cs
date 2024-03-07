@@ -14,9 +14,10 @@ public class CharacterJoystickWeaponRotate : MonoBehaviour
         set => _offset = value;
     }
 
+    //s
     private void Update()
     {
-#if UNITY_WEBGL || UNITY_EDITOR
+#if UNITY_IPHONE || UNITY_ANDROID
         Vector3 difference = new Vector3(_attackJoystick.JoystickDirection.x, _attackJoystick.JoystickDirection.y);
         _rotateWeapon.WeaponRotate(ref _offset, difference, _characterWeapon.Hand);
 #endif
