@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Joystick : MonoBehaviour
@@ -14,21 +13,14 @@ public class Joystick : MonoBehaviour
     private float _joystickRadius;
 
     public Vector2 JoystickDirection => _joystickDirection;
-    public static Joystick Instance { get; private set; }
-
-    private void Awake()
-    {
-        if (Instance != null)
-        {
-            throw new Exception();
-        }
-        Instance = this;
-    }
 
     void Start()
     {
         _joystickOriginalPos = _joystickBG.transform.position;
         _joystickRadius = _joystickBG.GetComponent<RectTransform>().sizeDelta.y / _maxJoystickRadius;
+#if !UNITY_WEB || UNITY_EDITOR
+        gameObject.SetActive(false);
+#endif
     }
 
     public void PointerDown()

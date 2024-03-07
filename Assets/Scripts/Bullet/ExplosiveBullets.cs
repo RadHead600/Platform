@@ -4,8 +4,7 @@ using UnityEngine;
 public class ExplosiveBullets : Bullet, IGrounded
 {
     [SerializeField] private float _radius;
-    [SerializeField] private float _bulletLifeTime = 10;
-    [SerializeField] private float _bulletDestroyLifeTime = 3;
+    [SerializeField] protected float _bulletDestroyLifeTime = 3;
     [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private Sprite _switchSprite;
     [SerializeField] private Rigidbody2D _rigidBody2D;

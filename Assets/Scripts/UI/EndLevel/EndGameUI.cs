@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class EndGameUI : MonoBehaviour
 {
     [SerializeField] private CompletedLevelUI _menuEndGame;
     [SerializeField] private LoseGameUI _lossMenu;
     [SerializeField] private LevelStarCompletedParameters _completedParameters;
+    [SerializeField] private List<GameObject> _disableObjects;
 
     private delegate Material AddStarDelegate(int starNum);
 
@@ -29,6 +31,7 @@ public class EndGameUI : MonoBehaviour
         if(collision.TryGetComponent(out Character character))
         {
             CountingLevelStars();
+            DisableObjects();
         }
     }
 
@@ -36,6 +39,7 @@ public class EndGameUI : MonoBehaviour
     {
         Time.timeScale = 0;
         _lossMenu.gameObject.SetActive(true);
+        DisableObjects();
     }
 
     private void CountingLevelStars()
@@ -73,5 +77,10 @@ public class EndGameUI : MonoBehaviour
     private void OnDestroy()
     {
         _addStars -= AddStar;
+    }
+
+    private void DisableObjects()
+    {
+        _disableObjects.ForEach(obj => obj.gameObject.SetActive(false));
     }
 }

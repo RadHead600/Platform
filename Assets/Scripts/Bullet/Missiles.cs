@@ -2,9 +2,6 @@
 
 public class Missiles : ExplosiveBullets, IGrounded
 {
-    [SerializeField] private float _bulletLifeTime = 10;
-    [SerializeField] private float _bulletDestroyLifeTime = 3;
-
     private bool _stopRun;
 
     private const float GROUND_RADIUS = 0.8f;

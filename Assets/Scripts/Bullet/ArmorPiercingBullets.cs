@@ -2,7 +2,10 @@
 
 public class ArmorPiercingBullets : Bullet
 {
-    [SerializeField] private float _bulletLifeTime = 5;
+    private void Start()
+    {
+        _bulletLifeTime = 5;
+    }
 
     void Update()
     {

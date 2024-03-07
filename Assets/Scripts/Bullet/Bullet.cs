@@ -3,6 +3,7 @@
 public abstract class Bullet : MonoBehaviour
 {
     [SerializeField] private LayerMask _blocks;
+    [SerializeField] protected float _bulletLifeTime = 10;
 
     public float Speed { get => _speed; set => _speed = value; }
     public int Damage { get => _damage; set => _damage = value; }
@@ -36,6 +37,6 @@ public abstract class Bullet : MonoBehaviour
 
     protected virtual void DestroyBullet()
     {
-        Destroy(gameObject, 4);
+        Destroy(gameObject, _bulletLifeTime);
     }
 }

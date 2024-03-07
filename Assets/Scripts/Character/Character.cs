@@ -5,20 +5,7 @@ public class Character : Unit
     [SerializeField] private Shild _shild;
     [SerializeField] private Rigidbody2D _rigidbody2D;
     [SerializeField] private EndGameUI _endGameCanvas;
-    [SerializeField] private RotateWeapon _rotateWeapon;
-    [SerializeField] private CharacterWeapon _characterWeapon;
-    [SerializeField] private CharacterAttack _characterAttack;
     [SerializeField] private CharacterStatsUI _characterStatUI;
-
-    private float _offset;
-
-    public Coroutine AttackCoroutine { get; set; }
-
-    public float Offset
-    {
-        get => _offset;
-        set => _offset = value;
-    }
 
     public Rigidbody2D Rigidbody2D => _rigidbody2D;
 
@@ -34,21 +21,6 @@ public class Character : Unit
 
     private void Start()
     {
-    }
-
-    private void FixedUpdate()
-    {
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        _rotateWeapon.WeaponRotate(ref _offset, difference, _characterWeapon.Hand);
-    }
-
-    private void Update()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            if (AttackCoroutine == null)
-                AttackCoroutine = StartCoroutine(_characterAttack.Attack());
-        }
     }
 
     public override int AddHealth(int amount)
