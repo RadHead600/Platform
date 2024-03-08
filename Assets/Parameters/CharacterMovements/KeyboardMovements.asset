@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11db211d9445eeb4db3b6a8b3b661f5d, type: 3}
   m_Name: KeyboardMovements
   m_EditorClassIdentifier: 
-  _speed: 300
+  _speed: 15
   _jump: 20
   _blockStay:
     serializedVersion: 2

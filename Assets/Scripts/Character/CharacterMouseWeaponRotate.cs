@@ -15,9 +15,7 @@ public class CharacterMouseWeaponRotate : MonoBehaviour
 
     private void Update()
     {
-#if !UNITY_WEBGL || UNITY_EDITOR
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         _rotateWeapon.WeaponRotate(ref _offset, difference, _characterWeapon.Hand);
-#endif
     }
 }

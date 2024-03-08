@@ -31,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
 
     public virtual void Move(float horizontalForce)
     {
-        Vector2 movement = new Vector3(horizontalForce * _characterMovementParameters.Speed * Time.fixedDeltaTime, 0.0f);
+        Vector2 movement = new Vector3(horizontalForce * _characterMovementParameters.Speed, 0.0f);
         _rigidBody.AddForce(movement);
         _characterMovementAnimation.MoveAnimation(horizontalForce);
     }

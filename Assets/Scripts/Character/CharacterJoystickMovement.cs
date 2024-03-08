@@ -21,7 +21,7 @@ public class CharacterJoystickMovement : CharacterMovement
 
     void Update()
     {
-#if UNITY_WEBGL || UNITY_EDITOR
+#if UNITY_IPHONE || UNITY_ANDROID
         Move(_horizontalForce);
         if (_movementJoystick.JoystickDirection.y >= MAX_JOYSTICK_DIRECTION_Y_FOR_JUMP && Grounded() && _isJumpAllowed)
         {

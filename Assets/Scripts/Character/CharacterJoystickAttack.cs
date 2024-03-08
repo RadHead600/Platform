@@ -20,7 +20,6 @@ public class CharacterJoystickAttack : MonoBehaviour
 
     private void Update()
     {
-#if UNITY_WEBGL || UNITY_EDITOR
         if (_attackJoystick.JoystickDirection.x != 0 || _attackJoystick.JoystickDirection.y != 0)
         {
             _difference = new Vector3(_attackJoystick.JoystickDirection.x, _attackJoystick.JoystickDirection.y);
@@ -30,6 +29,5 @@ public class CharacterJoystickAttack : MonoBehaviour
                 _characterStatUI.ChangeText(_characterStatUI.BulletsText, _characterWeapon.Weapon.BulletInMagazine.ToString());
             }
         }
-#endif
     }
 }

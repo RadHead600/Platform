@@ -10,7 +10,6 @@ public class CharacterKeyboardMovement : CharacterMovement
 
     void Update()
     {
-#if !UNITY_WEBGL || UNITY_EDITOR
         _horizontalForce = Input.GetAxis("Horizontal");
         Move(_horizontalForce);
         if (Input.GetButtonDown("Jump") && Grounded())
@@ -22,6 +21,5 @@ public class CharacterKeyboardMovement : CharacterMovement
         {
             AcrossPlatform();
         }
-#endif
     }
 }
