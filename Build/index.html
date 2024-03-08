@@ -27,11 +27,11 @@
         var loadingBar = document.querySelector("#unity-loading-bar");
         var progressBarFull = document.querySelector("#unity-progress-bar-full");
         var buildUrl = "Build";
-        var loaderUrl = buildUrl + "/build.loader.js";
+        var loaderUrl = buildUrl + "/Build.loader.js";
         var config = {
-            dataUrl: buildUrl + "/build.data.unityweb",
-            frameworkUrl: buildUrl + "/build.framework.js.unityweb",
-            codeUrl: buildUrl + "/build.wasm.unityweb",
+            dataUrl: buildUrl + "/Build.data.unityweb",
+            frameworkUrl: buildUrl + "/Build.framework.js.unityweb",
+            codeUrl: buildUrl + "/Build.wasm.unityweb",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "YandexGame",
@@ -68,13 +68,13 @@
                     .then(ysdk => {
                         console.log('Yandex SDK initialized');
                         window.ysdk = ysdk;
-                        myGameInstance.SendMessage('Languages', 'SetLanguage');
+                        //myGameInstance.SendMessage('Languages', 'SetLanguage');
                         initLeaderboards();
-                        initPlayer().then (() => {
-                            if (player.getMode() !== 'lite') {
-                                myGameInstance.SendMessage('MainMenu', 'OnlineLogin');
-                            }
-                        });
+                        // initPlayer().then (() => {
+                        //     if (player.getMode() !== 'lite') {
+                        //         myGameInstance.SendMessage('MainMenu', 'OnlineLogin');
+                        //     }
+                        // });
                     });
 
             }).catch((message) => {
@@ -83,30 +83,30 @@
         };
         document.body.appendChild(script);
 
-        function initPlayer() {
-            return ysdk.getPlayer().then(_player => {
-                player = _player;
+        // function initPlayer() {
+        //     return ysdk.getPlayer().then(_player => {
+        //         player = _player;
 
-                return player;
-            });
-        }
+        //         return player;
+        //     });
+        // }
 
-        function initLeaderboards() {
-            ysdk.getLeaderboards().then(_lb => lb = _lb);
-        }
+        // function initLeaderboards() {
+        //     ysdk.getLeaderboards().then(_lb => lb = _lb);
+        // }
 
-        function auth() {
-            initPlayer().then(_player => {
-                if (_player.getMode() === 'lite') {
-                    ysdk.auth.openAuthDialog().then(() => {
-                        initPlayer().catch(err => {
-                        });
-                    }).catch(() => {
-                    });
-                }
-            }).catch(err => {
-            });
-        }
+        // function auth() {
+        //     initPlayer().then(_player => {
+        //         if (_player.getMode() === 'lite') {
+        //             ysdk.auth.openAuthDialog().then(() => {
+        //                 initPlayer().catch(err => {
+        //                 });
+        //             }).catch(() => {
+        //             });
+        //         }
+        //     }).catch(err => {
+        //     });
+        // }
     </script>
 </body>
 
